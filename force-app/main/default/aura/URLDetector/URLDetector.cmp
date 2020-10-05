@@ -1,0 +1,18 @@
+<aura:component>
+
+    <aura:attribute name="routeChangeDetectedResult" type="String" required="false"/>
+    <aura:attribute name="locationChangeDetectedResult" type="String" required="false"/>
+
+    <aura:handler event="forceCommunity:routeChange" action="{!c.handleRouteChange}"/>
+    <aura:handler event="aura:locationChange" action="{!c.handleLocationChange}"/>
+
+    <h1 class="slds-text-heading_medium">
+        URL Detector
+    </h1>
+    <h2 class="slds-text-heading_small slds-var-m-bottom_small">
+        The URL Detected from Route Change event details are: {!v.routeChangeDetectedResult}
+    </h2>
+    <h2 class="slds-text-heading_small slds-var-m-bottom_small">
+        The URL Detected from Location Change event details are: {!v.routeChangeDetectedResult}
+    </h2>
+</aura:component>	
